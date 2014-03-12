@@ -13,6 +13,9 @@ body {
     margin: 0;
     padding: 0;
 }
+#ws_id {
+    text-align: center;
+}
 #map {
     position: fixed;
     top: 0;

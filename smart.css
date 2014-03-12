@@ -4,3 +4,9 @@
 .nonpc {
     display: block;
 }
+#code_input {
+    width: 100%;
+}
+#code_send {
+    width: 100%;
+}

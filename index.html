@@ -12,6 +12,13 @@
 </head>
 <body>
 <!-- PC block -->
+<div id="init_view" class="pure-g pc">
+  <div class="pure-u-1-5"></div>
+  <div class="pure-u-3-5">
+    <h1 id="ws_id"></h1>
+  </div>
+  <div class="pure-u-1-5"></div>
+</div>
 <div class="pure-g pc">
   <div class="pure-u-1-1">
     <div id="map"></div>
@@ -22,13 +29,18 @@
 <div class="nonpc">
   <div class="header">
     <div class="pure-menu pure-men-horizontal">
-      <a class="pure-menu-heading" href="#">昼ごはんダーツの旅</a>
+      <h1>昼ごはんダーツの旅</h1>
     </div>
   </div>
   <div class="pure-g">
-    <div class="pure-u-1-1">
-      <h2 id="latlng"></h2>
+    <div class="pure-u-5-1"></div>
+    <div class="pure-u-5-2">
+      <input id="code_input" type="text" placeholder="Code" />
     </div>
+    <div class="pure-u-5-1">
+      <button id="code_send" class="pure-button pure-button-primary">OK</button>
+    </div>
+    <div class="pure-u-5-1"></div>
   </div>
 </div>
 <!-- Smartphone block end -->
