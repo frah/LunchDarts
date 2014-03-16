@@ -77,6 +77,11 @@ function throwDart() {
     clearInterval(i_throw);
     window.removeEventListener('devicemotion', motionCap);
     sock.send(JSON.stringify(d));
+    $('#darts').animate({
+      marginTop: '-{0}px'.format($('#darts > img').height())
+    }, "fast", "swing", function(){
+      $('#darts').css('display', 'none');
+    });
   }
 }
 
