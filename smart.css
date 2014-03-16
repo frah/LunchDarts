@@ -33,8 +33,12 @@ body {
 }
 #darts {
     display: none;
+    text-align: center;
 }
 #darts img {
     max-height: 100%;
     width: auto;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
 }

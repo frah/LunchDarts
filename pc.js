@@ -7,6 +7,7 @@
  */
 var map; // Google Maps
 var marker; // Google Maps Marker
+var zoomFlag = false;
 
 /*
   WebSocket
@@ -81,13 +82,17 @@ function initMap(lat, lng) {
     smoothZoom(map, 5, map.getZoom(), false);
   }, 2000);
 
-  var d = {
-    type: 20,
-    mes: "ready"
-  };
-  sock.send(JSON.stringify(d));
-
-  console.log('Google Maps initialize complete');
+  google.maps.event.addListener(map, 'zoom_changed', function () {
+    if (!zoomFlag && map.getZoom() === 6) {
+      var d = {
+        type: 20,
+        mes: "ready"
+      };
+      sock.send(JSON.stringify(d));
+      zoomFlag = true;
+      console.log('Google Maps initialize complete');
+    }
+  });
 }
 function putMarker (map, latlng, dat) {
   console.log('putMarker('+map+','+latlng+',dat')

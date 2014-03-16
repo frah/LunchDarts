@@ -26,6 +26,7 @@ sock.onmessage = function(ev) {
     var j = $.parseJSON(ev.data);
     if (j.type >= 90) {
       alert(j.mes);
+      $('#code_send').removeAttr('disabled');
       return;
     }
     switch (j.type) {
@@ -33,9 +34,12 @@ sock.onmessage = function(ev) {
         break;
       case 10:
         // pc ready
-        $('#search_shop').removeAttr("disabled");
-        window.addEventListener('devicemotion', motionCap);
-        i_throw = setInterval(throwDart, 100);
+        $('#menu').slideUp('fast');
+        $('#darts').slideDown('fast', function(){
+          ac = 0; acg = 0; prev_ac = 0;
+          window.addEventListener('devicemotion', motionCap);
+          i_throw = setInterval(throwDart, 100);
+        });
         break;
     }
   } catch (e) {
@@ -110,13 +114,16 @@ function doGeolocate() {
             break;
         }
         alert('現在地の取得に失敗しました\n' + _err_mes);
+        $('#code_send').removeAttr('disabled');
         return;
       }, _geoOption);
   } else {
     alert('現在地の取得ができません');
+    $('#code_send').removeAttr('disabled');
   }
 }
 
 $('#code_send').click(function(){
+  $(this).attr('disabled', 'disabled');
   doGeolocate();
 });
