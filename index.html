@@ -12,12 +12,24 @@
 </head>
 <body>
 <!-- PC block -->
-<div id="init_view" class="pure-g pc">
-  <div class="pure-u-1-5"></div>
-  <div class="pure-u-3-5">
-    <h1 id="ws_id"></h1>
+<div id="init_view" class="pc">
+  <div class="splash-container">
+    <div class="splash">
+      <h1 class="splash-head">昼ごはんダーツの旅</h1>
+    </div>
   </div>
-  <div class="pure-u-1-5"></div>
+  <div class="content-wrapper">
+    <div class="content">
+      <h2 class="content-head is-center">Identify your smartphone</h2>
+      <div class="pure-u-1-6"></div>
+      <div class="pure-u-4-6 is-center">
+        <h3>1. このサイトをスマートフォンで開きます</h3>
+        <h3>2. 以下の接続コードを入力してOKボタンで接続します</h3>
+        <h2>接続コード: <span id="ws_id"></span></h2>
+      </div>
+      <div class="pure-u-1-6"></div>
+    </div>
+  </div>
 </div>
 <div class="pure-g pc">
   <div class="pure-u-1-1">
@@ -43,11 +55,6 @@
   <div class="pure-g">
     <div class="pure-u-1 center">
       <button id="code_send" class="pure-button button-success">OK</button>
-    </div>
-  </div>
-  <div class="pure-g">
-    <div class="pure-u-1 center">
-      <button id="search_shop" class="pure-button pure-button-primary" disabled="disabled">Search Shop</button>
     </div>
   </div>
   </div>

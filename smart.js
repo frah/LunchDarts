@@ -3,6 +3,8 @@
  */
 
 var lat, lng;
+var ac = 0, acg = 0, prev_ac = 0;
+var i_throw;
 
 /*
  WebSocket
@@ -32,6 +34,8 @@ sock.onmessage = function(ev) {
       case 10:
         // pc ready
         $('#search_shop').removeAttr("disabled");
+        window.addEventListener('devicemotion', motionCap);
+        i_throw = setInterval(throwDart, 100);
         break;
     }
   } catch (e) {
@@ -41,13 +45,45 @@ sock.onmessage = function(ev) {
 };
 
 /*
+ Darts
+ */
+function motionCap(e) {
+  var filter_v = 0.1;
+
+  // lowpass filter
+  prev_ac = ac;
+  ac = (e.acceleration.y * filter_v) + (ac * (1.0 - filter_v));
+  acg = (e.accelerationIncludingGravity.x * filter_v) + (acg * (1.0 - filter_v));
+}
+function throwDart() {
+  var g_threshold = 5.0;
+  var a_threshold = -0.20;
+  if (Math.abs(acg) < g_threshold) {
+    return;
+  }
+  var delta = ac - prev_ac;
+  console.log('ac: {0}, prev_ac: {1}, delta: {2}'.format(ac, prev_ac, delta));
+  if (delta < a_threshold) {
+    console.log('Throw!');
+    var d = {
+      type: 31,
+      lat: lat,
+      lng: lng
+    };
+    clearInterval(i_throw);
+    window.removeEventListener('devicemotion', motionCap);
+    sock.send(JSON.stringify(d));
+  }
+}
+
+/*
  Geolocation
  */
 function doGeolocate() {
   if (navigator.geolocation) {
     var _geoOption = {
       enableHighAccuracy: true,
-      timeout: 60000
+      timeout: 30000
     };
     navigator.geolocation.getCurrentPosition(
       function(loc) {
@@ -84,12 +120,3 @@ function doGeolocate() {
 $('#code_send').click(function(){
   doGeolocate();
 });
-$('#search_shop').click(function () {
-  var d = {
-    type: 31,
-    lat: lat,
-    lng: lng
-  };
-  sock.send(JSON.stringify(d));
-});
-$('#code_input').focus();
