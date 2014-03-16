@@ -41,6 +41,17 @@ sock.onmessage = function(ev) {
           i_throw = setInterval(throwDart, 100);
         });
         break;
+      case 3:
+        var d = j.data;
+        $('#shop_name').text(d.Name);
+        $('#shop_image').attr('src', d.Property.LeadImage);
+        $('#shop_address').text(d.Property.Address);
+        $('#shop_tel').text(d.Property.Tel1);
+        $('#shop_desc').html(d.Description);
+        setTimeout(function(){
+          $('#shop_info').slideDown();
+        }, 1000);
+        break;
     }
   } catch (e) {
     console.log(e);

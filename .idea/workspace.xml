@@ -28,7 +28,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="45" column="15" selection-start="1557" selection-end="1561" vertical-scroll-proportion="-5.76" vertical-offset="576" max-vertical-offset="1456">
+                <state line="67" column="20" selection-start="2150" selection-end="2159" vertical-scroll-proportion="-13.76" vertical-offset="728" max-vertical-offset="1568">
                   <folding />
                 </state>
               </provider>
@@ -55,7 +55,7 @@
           <file leaf-file-name="smart.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/smart.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="58" column="40" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.38853502" vertical-offset="591" max-vertical-offset="2128">
+                <state line="52" column="17" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.733758" vertical-offset="224" max-vertical-offset="2384">
                   <folding>
                     <element signature="e#0#43#0" expanded="false" />
                   </folding>
@@ -75,7 +75,7 @@
           <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/node/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="136" column="24" selection-start="3992" selection-end="3992" vertical-scroll-proportion="0.0" vertical-offset="1679" max-vertical-offset="2496">
+                <state line="83" column="5" selection-start="2595" selection-end="2595" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2576">
                   <folding />
                 </state>
               </provider>
@@ -88,7 +88,7 @@
           <file leaf-file-name="smart.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/smart.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="35" column="22" selection-start="543" selection-end="543" vertical-scroll-proportion="0.7133758" vertical-offset="0" max-vertical-offset="785">
+                <state line="45" column="17" selection-start="737" selection-end="737" vertical-scroll-proportion="0.91719747" vertical-offset="0" max-vertical-offset="832">
                   <folding />
                 </state>
               </provider>
@@ -118,19 +118,19 @@
         <option value="$PROJECT_DIR$/basic.css" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/node/package.json" />
-        <option value="$PROJECT_DIR$/node/index.js" />
         <option value="$PROJECT_DIR$/pc.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/smart.css" />
         <option value="$PROJECT_DIR$/pc.js" />
+        <option value="$PROJECT_DIR$/smart.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/node/index.js" />
         <option value="$PROJECT_DIR$/smart.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
-    <option name="y" value="124" />
+    <option name="x" value="323" />
+    <option name="y" value="129" />
     <option name="width" value="1492" />
     <option name="height" value="914" />
   </component>
@@ -295,7 +295,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="124" width="1492" height="914" extended-state="0" />
+    <frame x="323" y="129" width="1492" height="914" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -565,20 +565,6 @@
         <state line="198" column="18" selection-start="4044" selection-end="4044" vertical-scroll-proportion="0.4005168" vertical-offset="2858" max-vertical-offset="3632" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="284" selection-end="284" vertical-scroll-proportion="-7.68" vertical-offset="0" max-vertical-offset="336">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="24" selection-start="3992" selection-end="3992" vertical-scroll-proportion="0.0" vertical-offset="1679" max-vertical-offset="2496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pc.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="18" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="3168">
@@ -593,20 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="15" selection-start="1557" selection-end="1561" vertical-scroll-proportion="-5.76" vertical-offset="576" max-vertical-offset="1456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="22" selection-start="543" selection-end="543" vertical-scroll-proportion="0.7133758" vertical-offset="0" max-vertical-offset="785">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="131" column="10" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.0" vertical-offset="1408" max-vertical-offset="2592">
@@ -614,9 +586,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/smart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="17" selection-start="737" selection-end="737" vertical-scroll-proportion="0.91719747" vertical-offset="0" max-vertical-offset="832">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="20" selection-start="2150" selection-end="2159" vertical-scroll-proportion="-13.76" vertical-offset="728" max-vertical-offset="1568">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="284" selection-end="284" vertical-scroll-proportion="-7.68" vertical-offset="0" max-vertical-offset="336">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="5" selection-start="2595" selection-end="2595" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/smart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="40" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.38853502" vertical-offset="591" max-vertical-offset="2128">
+        <state line="52" column="17" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.733758" vertical-offset="224" max-vertical-offset="2384">
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>

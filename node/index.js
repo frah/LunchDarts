@@ -76,6 +76,11 @@ function getShopData(soc, id, lat, lng) {
 
     log('[{0}->{1}] Send: {2}'.format(id, bind[id], JSON.stringify(ret)));
     soc.send(JSON.stringify(ret));
+    var tsoc = cons[id];
+    if (tsoc !== void 0) {
+      log('[{0}->{1}] Send: {2}'.format(bind[id], id, JSON.stringify(ret)));
+      tsoc.send(JSON.stringify(ret));
+    }
   });
 }
 

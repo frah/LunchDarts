@@ -42,3 +42,6 @@ body {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
 }
+#shop_info {
+    display: none;
+}
