@@ -1,6 +1,6 @@
 {
   "name": "lunch_darts",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "frah",
   "license": "MIT",
   "devDependencies": {
-    "websocket": "~1.0.8"
+    "websocket": "~1.0.8",
+    "request": "~2.34.0"
   }
 }

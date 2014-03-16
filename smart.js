@@ -2,6 +2,8 @@
  * Created by freiheit on 14/03/11.
  */
 
+var lat, lng;
+
 /*
  WebSocket
  */
@@ -20,8 +22,16 @@ sock.onmessage = function(ev) {
   console.log('WebSocket message received: ' + ev.data);
   try {
     var j = $.parseJSON(ev.data);
+    if (j.type >= 90) {
+      alert(j.mes);
+      return;
+    }
     switch (j.type) {
       case 1:
+        break;
+      case 10:
+        // pc ready
+        $('#search_shop').removeAttr("disabled");
         break;
     }
   } catch (e) {
@@ -41,6 +51,8 @@ function doGeolocate() {
     };
     navigator.geolocation.getCurrentPosition(
       function(loc) {
+        lat = loc.coords.latitude;
+        lng = loc.coords.longitude;
         var d = {
           type: 30,
           id: $('#code_input').val(),
@@ -72,3 +84,12 @@ function doGeolocate() {
 $('#code_send').click(function(){
   doGeolocate();
 });
+$('#search_shop').click(function () {
+  var d = {
+    type: 31,
+    lat: lat,
+    lng: lng
+  };
+  sock.send(JSON.stringify(d));
+});
+$('#code_input').focus();

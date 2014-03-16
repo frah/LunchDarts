@@ -27,22 +27,49 @@
 <!-- PC block end -->
 <!-- Smartphone block -->
 <div class="nonpc">
+  <div id="menu">
   <div class="header">
     <div class="pure-menu pure-men-horizontal">
-      <h1>昼ごはんダーツの旅</h1>
+      <h1 class="center">昼ごはんダーツの旅</h1>
     </div>
   </div>
   <div class="pure-g">
-    <div class="pure-u-5-1"></div>
-    <div class="pure-u-5-2">
-      <input id="code_input" type="text" placeholder="Code" />
+    <div class="pure-u-1">
+      <form class="pure-form center">
+        <input id="code_input" type="text" pattern="\d*" placeholder="Code" maxlength="4" autofocus />
+      </form>
     </div>
-    <div class="pure-u-5-1">
-      <button id="code_send" class="pure-button pure-button-primary">OK</button>
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-1 center">
+      <button id="code_send" class="pure-button button-success">OK</button>
     </div>
-    <div class="pure-u-5-1"></div>
+  </div>
+  <div class="pure-g">
+    <div class="pure-u-1 center">
+      <button id="search_shop" class="pure-button pure-button-primary" disabled="disabled">Search Shop</button>
+    </div>
+  </div>
+  </div>
+  <div id="darts">
+    <img src="darts.png" />
   </div>
 </div>
 <!-- Smartphone block end -->
 </body>
+
+<script id="infoWindowTemplate" type="text/x-jquery-tmpl">
+  <div>
+    <div id="info_text">
+      <h3>{Name}</h3>
+      <p>住所: {Address}</p>
+      <p>TEL: {TEL}</p>
+    </div>
+    <div id="info_img">
+      <p>
+        <img src="{Image}" width="140">
+      </p>
+    </div>
+  </div>
+</script>
 </html>

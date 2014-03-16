@@ -23,3 +23,12 @@ body {
     width: 100%;
     height: 100%;
 }
+#info_text {
+    width: 250px;
+    float: left;
+}
+#info_img {
+    width: 150px;
+    float: left;
+    vertical-align: middle;
+}

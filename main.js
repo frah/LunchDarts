@@ -18,6 +18,13 @@ String.prototype.format = function() {
   var args = arguments;
   return this.replace(/\{(\d)\}/g, function(m, c) { return args[parseInt(c)] });
 };
+String.prototype.tmpl = function(datas) {
+  var str = this;
+  for (var i in datas) {
+    str = str.replace('{'+i+'}', datas[i]);
+  }
+  return str;
+};
 
 /*
   Check UA (init method)
