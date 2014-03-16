@@ -34,3 +34,7 @@ body {
 #darts {
     display: none;
 }
+#darts img {
+    max-height: 100%;
+    width: auto;
+}
