@@ -40,18 +40,15 @@ function originIsAllowed(origin) {
   return false;
 }
 
-function getShopData(soc, id, lat, lng) {
+function getShopData(soc, id, lat, lng, cnt) {
   var yLocalAPI = "http://search.olp.yahooapis.jp/OpenLocalPlatform/V1/localSearch" +
-    "?appid={0}&output=json&lat={1}&lon={2}&dist=1&query=%E3%83%A9%E3%83%B3%E3%83%81" +
+    "?appid={0}&output=json&lat={1}&lon={2}&dist={3}&query=%E3%83%A9%E3%83%B3%E3%83%81" +
     "&sort=hybrid&open=now&loco_mode=true&results=100";
+  var ret = {};
   var reqOpt = {
-    url: yLocalAPI.format(yAppID, lat, lng),
+    url: yLocalAPI.format(yAppID, lat, lng, cnt),
     method: "GET",
     json: true
-  };
-  var ret = {
-    type: 3,
-    data: {}
   };
   request(reqOpt, function(err, resp, body) {
     if (!err && resp.statusCode == 200) {
@@ -61,11 +58,18 @@ function getShopData(soc, id, lat, lng) {
         ret.type = 91;
         ret.mes = 'API error: {0}'.format(body.Error.Message);
       } else if (rInfo.Count == 0) {
-        log('API error: No results');
-        ret.type = 92;
-        ret.mes = 'Error: No results';
+        if (cnt < 6) {
+          log('API error: No results (dist={0})'.format(cnt));
+          getShopData(soc, id, lat, lng, cnt + 1);
+          return;
+        } else {
+          log('API error: No results');
+          ret.type = 92;
+          ret.mes = 'Error: No results';
+        }
       } else {
         var index = Math.floor(Math.random() * rInfo.Count);
+        ret.type = 3;
         ret.data = body.Feature[index];
       }
     } else {
@@ -142,7 +146,7 @@ wss.on('request', function (req) {
         bind[d.id] = id;
         break;
       case 31:
-        getShopData(tsoc, id, d.lat, d.lng);
+        getShopData(tsoc, id, d.lat, d.lng, 1);
         break;
     }
   })
