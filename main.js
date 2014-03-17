@@ -43,7 +43,7 @@ function checkUA() {
     console.log('Access from Smartphone');
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "smart.js";
+    script.src = "smart.js?ver=1.00";
     document.body.appendChild(script);
   } else {
     // PC
@@ -58,7 +58,7 @@ function initialize() {
   console.log('Loading Google Maps API complete. Load main script.');
   var script = document.createElement("script");
   script.type = "text/javascript";
-  script.src = "pc.js";
+  script.src = "pc.js?ver=1.00";
   document.body.appendChild(script);
 }
 function loadMapScript() {
