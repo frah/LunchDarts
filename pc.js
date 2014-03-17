@@ -12,9 +12,9 @@ var zoomFlag = false;
 /*
   WebSocket
  */
-var sock = new WebSocket('ws://frah.me:10080');
+var sock = new WebSocket('ws://home.tokcs.com/ws/');
 sock.onopen = function() {
-  console.log('WebSocket connected: ws://frah.me:10080');
+  console.log('WebSocket connected: ws://home.tokcs.com/ws/');
 };
 sock.onerror = function(ev) {
   console.log('WebSocket error: ');
